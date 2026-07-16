@@ -7,8 +7,11 @@ Personal resume/portfolio site for **Inder Sawhney**, QA/QE Leader & Product Del
 ## What's inside
 
 ```
-├── index.html          # Page structure and content
-├── style.css           # Design system, layout, and responsive styles
+├── index.html          # Home — hero, stats dashboard, and Explore cards
+├── experience.html     # Full career pipeline, role by role
+├── expertise.html      # Executive impact highlights + complete tooling stack
+├── leadership.html     # Team building, governance, education & credentials
+├── style.css           # Shared design system, layout, and responsive styles
 ├── script.js           # Scroll-reveal animations and footer year
 ├── inder-headshot.jpg  # Web-optimized headshot
 └── README.md
@@ -40,10 +43,12 @@ python3 -m http.server 8000
 
 ## Updating content
 
-- **Roles and experience** — edit the `.stage` blocks in the Experience section of `index.html`.
-- **Stats** — the three dashboard tiles live in the `.dash` section.
-- **Skills** — each `.skill-row` in the Skills section holds one category of chips.
-- **Contact info** — links are in the `.contact` footer.
+- **Roles and experience** — edit the `.stage` blocks in `experience.html`.
+- **Stats** — the three dashboard tiles live in the `.dash` section of `index.html`.
+- **Impact and skills** — gate cards and `.skill-row` chip groups live in `expertise.html`.
+- **Leadership, education, credentials** — in `leadership.html`.
+- **Contact info** — the `.contact` footer is repeated on every page; update it in all four HTML files.
+- **Navigation** — the header nav is also repeated per page; if you add a page, add its link to each file's nav.
 - **Colors and fonts** — all design tokens are CSS variables at the top of `style.css`.
 
 ## Contact
