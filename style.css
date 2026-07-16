@@ -511,3 +511,104 @@ a:focus-visible, .btn:focus-visible {
   outline-offset: 3px;
   border-radius: 6px;
 }
+
+/* ==========================================================
+   Multi-page additions
+   ========================================================== */
+
+/* active nav link */
+.nav-links a.active {
+  color: var(--steel-deep);
+  font-weight: 600;
+}
+
+/* sub-page hero */
+.page-hero {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3.5rem;
+}
+.page-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.2rem;
+}
+.page-intro {
+  color: var(--muted);
+  max-width: 62ch;
+  font-size: 1.02rem;
+}
+
+/* explore cards on home */
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.explore-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.7rem 1.6rem 1.5rem;
+  color: var(--ink);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+.explore-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 44px -22px rgba(16, 24, 32, 0.4);
+  border-color: var(--steel-deep);
+}
+.explore-num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--steel-deep);
+  margin-bottom: 1.6rem;
+}
+.explore-card h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.55rem;
+}
+.explore-card p:not(.explore-num) {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.4rem;
+}
+.explore-go {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--steel-deep);
+}
+.explore-card:hover .explore-go { text-decoration: underline; }
+
+/* section spacing helpers for sub-pages */
+.section-tight { padding-top: 1.5rem; }
+.section-flush { padding-top: 3.5rem; }
+
+/* wide gate card + two-column gate grid */
+.gate-wide { grid-column: 1 / -1; }
+.gate-grid-two { grid-template-columns: 1fr 1fr; }
+
+/* prev/next pager */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 900px) {
+  .explore-grid { grid-template-columns: 1fr; }
+  .gate-grid-two { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .pager { flex-direction: column; align-items: stretch; text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .explore-card:hover { transform: none; }
+}
